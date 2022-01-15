@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>webpage to take username</title>
+  </head>
+  <body>
+    <p>username</p>
+    <input type="text" name="" id="">
+
+
+    <button onclick="generate();">Click here</button>
+      <p id="uniqueID"></p>
+      <p id="demo"></p>
+      <script>
+         function generate() {
+         let id = () => {
+           return Math.floor((1 + Math.random()) * 0x10000)
+               .toString(16)
+               .substring(1);
+         }
+         document.getElementById("uniqueID").innerHTML = id();
+         document.getElementById('demo').innerHTML=Date();
+         }
+      </script>
+  </body>
+</html>
